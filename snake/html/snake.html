@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Snake</title>
+  </head>
+  <body>
+    <script src="../js/jquery-2.1.1.js"></script>
+    <!-- Whackjobs at GithubPages don't understand symlinks... -->
+    <script src="../js/snake.js"></script>
+    <script src="../js/board.js"></script>
+    <script src="../js/snake-view.js"></script>
+    <div id="el">
+    </div>
+
+    <script>
+      // Write your code here.
+      var $el = $("#el");
+      var view = new Snake.View(new Snake.Serpent(), $el);
+      setInterval(view.step.bind(view), 50)
+    </script>
+
+
+  </body>
+</html>
